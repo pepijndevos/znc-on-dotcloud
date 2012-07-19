@@ -5,5 +5,5 @@ znc:
     irc: tcp
   systempackages:
     - znc
-  #znc_user: johndoe
-  #znc_pass: OpenSesame
+  znc_user: pepijndevos
+  znc_pass: fietspomp
