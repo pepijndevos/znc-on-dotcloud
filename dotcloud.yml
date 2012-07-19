@@ -4,7 +4,10 @@ znc:
   ports:
     irc: tcp
   systempackages:
-    - znc
-    - znc-webadmin
+    - build-essential
+    - libssl-dev
+    - libperl-dev
+    - pkg-config
+    - libc-ares-dev
   znc_user: pepijndevos
   znc_pass: fietspomp

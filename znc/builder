@@ -1,3 +1,22 @@
 #!/bin/sh
+
+wget http://znc.in/releases/znc-latest.tar.gz
+tar -xzvf znc-latest.tar.gz
+cd znc-0*
+./configure --prefix=$HOME/znc
+make
+make install
+cd ..
+
+wget http://github.com/wired/colloquypush/raw/master/znc/colloquy.cpp
+$HOME/znc/bin/znc-buildmod colloquy.cpp
+mkdir -p ~/.znc/modules/
+mv colloquy.so ~/.znc/modules/
+
+wget https://raw.github.com/jreese/znc-push/master/push.cpp
+$HOME/znc/bin/znc-buildmod push.cpp
+mkdir -p ~/.znc/modules/
+mv push.so ~/.znc/modules/
+
 cd "$(dirname "$0")"
 cp run ~

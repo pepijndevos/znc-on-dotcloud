@@ -32,14 +32,15 @@ LoadModule = webadmin
         LoadModule = awaynick
         LoadModule = keepnick
         LoadModule = kickrejoin
-        LoadModule = log
         LoadModule = nickserv
         LoadModule = simple_away
 
         Server     = irc.freenode.net 6667
 
-        <Chan #dotcloud>
+        <Chan #clojure>
+        </Chan>
+	<Chan #hackerschool>
         </Chan>
 </User>
 EOF
-exec znc -f
+exec $HOME/znc/bin/znc -f
