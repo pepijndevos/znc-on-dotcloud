@@ -14,6 +14,7 @@ ZNC_HASH="sha256#$(echo -n ${ZNC_PASS}${ZNC_SALT} | sha256sum | awk '{print $1}'
 cat >~/.znc/configs/znc.conf <<EOF
 Listen     = $PORT_IRC
 LoadModule = lastseen
+LoadModule = webadmin
 
 <User $ZNC_USER>
         Pass       = $ZNC_HASH
@@ -28,7 +29,6 @@ LoadModule = lastseen
 	MaxJoins   = 1
 
         LoadModule = admin
-        LoadModule = webadmin
         LoadModule = awaynick
         LoadModule = keepnick
         LoadModule = kickrejoin
