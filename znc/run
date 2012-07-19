@@ -28,6 +28,7 @@ LoadModule = lastseen
 	MaxJoins   = 1
 
         LoadModule = admin
+        LoadModule = webadmin
         LoadModule = awaynick
         LoadModule = keepnick
         LoadModule = kickrejoin
